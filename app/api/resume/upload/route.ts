@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerClient } from '@supabase/auth-helpers-nextjs'
 import { cookies } from 'next/headers'
-import { PDFParse } from 'pdf-parse'
+import { extractText } from 'unpdf'
 
 export async function POST(request: NextRequest) {
   const cookieStore = await cookies()
@@ -55,10 +55,8 @@ export async function POST(request: NextRequest) {
   // Extract text from PDF
   let originalText = ''
   try {
-    const parser = new PDFParse({ data: buffer })
-    const result = await parser.getText()
-    originalText = result.text.trim()
-    await parser.destroy()
+    const { text } = await extractText(new Uint8Array(buffer), { mergePages: true })
+    originalText = text.join('\n').trim()
   } catch {
     // Non-fatal — proceed without extracted text
   }
