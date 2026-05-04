@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "ResumeAI — Get hired faster with AI-tailored resumes",
   description: "ResumeAI rewrites your resume for each job description in seconds. Beat ATS filters and get more interviews.",
+  icons: { icon: "/score_bars_purple_refined.svg" },
 };
 
 export default function RootLayout({

@@ -79,9 +79,7 @@ export default function Sidebar({
       >
         {/* Logo */}
         <div className="flex h-16 shrink-0 items-center gap-3 border-b border-gray-100 px-5">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gray-950 text-white">
-            <span className="text-[11px] font-bold tracking-tight">RA</span>
-          </div>
+          <img src="/score_bars_purple_refined.svg" alt="ResumeAI" className="h-8 w-8" />
           <span className="text-sm font-bold tracking-tight text-gray-950">ResumeAI</span>
         </div>
 
@@ -180,9 +178,7 @@ export default function Sidebar({
             <MenuIcon />
           </button>
           <div className="flex items-center gap-2">
-            <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-gray-950 text-white">
-              <span className="text-[10px] font-bold tracking-tight">RA</span>
-            </div>
+            <img src="/score_bars_purple_refined.svg" alt="ResumeAI" className="h-7 w-7" />
             <span className="text-sm font-bold tracking-tight text-gray-950">ResumeAI</span>
           </div>
         </div>

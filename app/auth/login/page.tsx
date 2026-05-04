@@ -135,8 +135,8 @@ function LoginForm() {
 
 function LogoMark() {
   return (
-    <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-950 text-white shadow-lg shadow-gray-900/20">
-      <span className="text-lg font-bold tracking-tight">RA</span>
+    <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center">
+      <img src="/score_bars_purple_refined.svg" alt="ResumeAI" className="h-14 w-14" />
     </div>
   )
 }
