@@ -56,7 +56,7 @@ export async function POST(request: NextRequest) {
   let originalText = ''
   try {
     const { text } = await extractText(new Uint8Array(buffer), { mergePages: true })
-    originalText = text.join('\n').trim()
+    originalText = text.trim()
   } catch {
     // Non-fatal — proceed without extracted text
   }
