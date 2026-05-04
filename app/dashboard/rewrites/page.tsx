@@ -55,7 +55,7 @@ export default async function RewritesPage() {
       ) : (
         <ul className="space-y-3">
           {rewrites!.map((rw) => {
-            const resume = rw.resumes as { id: string; file_url: string | null } | null
+            const resume = rw.resumes as unknown as { id: string; file_url: string | null } | null
             const fileName = getFileName(resume?.file_url ?? null)
             const snippet = rw.job_description.slice(0, 120).trimEnd()
             const truncated = rw.job_description.length > 120
